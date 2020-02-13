@@ -17,7 +17,6 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 from numpy.random import seed
 
-from tensorflow import set_random_seed
 
 def check_directories(data, im_dir):
     # Explore images of top artists
@@ -87,11 +86,12 @@ def gather_data():
     dat = preprocess(dat)
 
     check_directories(dat, im_dir)
-    # print_random_sample(dat, im_dir)
+    print_random_sample(dat, im_dir)
     return dat
 
-def build_model(data):
 
+#TODO: Build model so that a performance can be calculated.
+def build_model(data):
     batch_size = 16
     train_input_shape = (224, 224, 3)
 
