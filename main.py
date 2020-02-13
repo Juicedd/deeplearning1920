@@ -19,10 +19,6 @@ from numpy.random import seed
 
 from tensorflow import set_random_seed
 
-
-
-
-
 def check_directories(data, im_dir):
     # Explore images of top artists
     dir_names = data['name'].str.replace(' ', '_').values
