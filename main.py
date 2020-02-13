@@ -85,6 +85,8 @@ def gather_data():
     dat = pd.read_csv('artists.csv')
     dat = preprocess(dat)
 
+    #TODO: Make function that greps the images
+
     check_directories(dat, im_dir)
     print_random_sample(dat, im_dir)
     return dat
